@@ -107,7 +107,7 @@ namespace MahApps.Metro.Behaviours
 
             var topmostHack = new Action(() =>
                                            {
-                                               if (this.AssociatedObject.Topmost)
+                                               if (this.AssociatedObject != null && this.AssociatedObject.Topmost)
                                                {
                                                    var raiseValueChanged = this.topMostChangeNotifier.RaiseValueChanged;
                                                    this.topMostChangeNotifier.RaiseValueChanged = false;
